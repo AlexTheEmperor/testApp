@@ -10,15 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818183109) do
+ActiveRecord::Schema.define(version: 0) do
 
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "user_type"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "user", id: :integer, force: :cascade do |t|
+    t.string "username", limit: 30, null: false
+    t.string "password", limit: 64, null: false
   end
 
 end
