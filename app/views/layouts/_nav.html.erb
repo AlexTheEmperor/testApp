@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+	<div class="navbar-form navbar-right">
+		<%= button_to 'Logout', logout_path, :class => 'btn btn-danger', data: {confirm: 'Are you sure?'} %>
+	</div>
+	<ul class="nav navbar-nav navbar-right">
+		<%
+		navs = {'home'=>['Home', root_path],
+				'about'=>['About', about_path],
+				'map'=>['Map', map_path]}
+		navs.each do |nav, content|
+			if curr and nav == curr %>
+			<li class="active">
+			<% else %>
+			<li>
+			<% end %>
+				<%= link_to content[0], content[1] %>
+			</li>
+		<% end %>
+	</ul>
+</nav>
