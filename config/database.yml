@@ -3,16 +3,9 @@ development:
   database: test_db
   pool: 5
   timeout: 5000
-  username: 'tzxolpzyruwcry'
-  password: 'S3NxQSPprzQHZ7bMKC-heCHgdV'
-# test:
-#   adapter: postgresql
-#   database: my_database_test
-#   pool: 5
-#   timeout: 5000
 
-# production:
-#   adapter: postgresql
-#   database: my_database_production
-#   pool: 5
-#   timeout: 5000
+staging:
+  url: <%= ENV['DATABSE_URL'] %>
+  
+production:
+  url: <%= ENV['DATABASE_URL'] %>
