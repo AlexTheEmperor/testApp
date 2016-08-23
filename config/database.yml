@@ -3,8 +3,8 @@ development:
   database: test_db
   pool: 5
   timeout: 5000
-  username: 'postgres'
-  password: 'nadine'
+  username: 'tzxolpzyruwcry'
+  password: 'S3NxQSPprzQHZ7bMKC-heCHgdV'
 # test:
 #   adapter: postgresql
 #   database: my_database_test
